@@ -28,9 +28,15 @@ use 'David-Kunz/treesitter-unit'
 
 ### Useful mappings
 
+For init.lua:
 ```
 vim.api.nvim_set_keymap('v', 'x', ':lua require"treesitter-unit".select()<CR>', {noremap=true})
 vim.api.nvim_set_keymap('o', 'x', ':<c-u>lua require"treesitter-unit".select()<CR>', {noremap=true})
+```
+For init.vim:
+```
+vnoremap x :lua require"treesitter-unit".select()<CR>
+onoremap x :<c-u>lua require"treesitter-unit".select()<CR>
 ```
 
 ## Similar plugins

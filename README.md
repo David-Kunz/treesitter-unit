@@ -1,6 +1,6 @@
 # treesitter-unit
 
-A [Neovim](https://neovim.io/) plugin to deal with [tree-sitter](https://github.com/tree-sitter/tree-sitter) units.
+A tiny [Neovim](https://neovim.io/) plugin to deal with [tree-sitter](https://github.com/tree-sitter/tree-sitter) units.
 A unit is defined as a tree-sitter node (from the beginning of the line) including all its children.
 It allows you to quickly select, yank, delete or replace language-specific ranges.
 

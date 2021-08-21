@@ -8,7 +8,7 @@ It allows you to quickly select, yank, delete or replace language-specific range
 
 ## Installation
 
-Requirements: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+Requirements: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) including a parser for your language
 
 For [vim-plug](https://github.com/junegunn/vim-plug):
 ```

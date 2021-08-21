@@ -43,3 +43,7 @@ vim.api.nvim_set_keymap('o', 'x', ':<c-u>lua require"treesitter-unit".select()<C
 
 - [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) for more fine-granular control
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#incremental-selection) for incremental selection
+- [nvim-ts-hint-textobject](https://github.com/mfussenegger/nvim-ts-hint-textobject)
+
+## Making of video
+[![](https://i.ytimg.com/vi/dPQfsASHNkg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_iCGCXjipwKLOxHi2OFBR5XAQfw)](https://youtu.be/dPQfsASHNkg "Let's create a Neovim plugin using Treesitter and Lua")

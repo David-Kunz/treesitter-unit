@@ -21,12 +21,12 @@ use 'David-Kunz/treesitter-unit'
 
 ## Usage
 
-### Select treesitter unit:
+### Select treesitter unit
 ```
 :lua require"treesitter-unit".select()
 ```
 
-### Useful mappings:
+### Useful mappings
 
 ```
 vim.api.nvim_set_keymap('v', 'x', ':lua require"treesitter-unit".select()<CR>', {noremap=true})

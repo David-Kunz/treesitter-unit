@@ -43,3 +43,7 @@ vim.api.nvim_set_keymap('n', 'vx', ':lua require"treesitter-unit".select()<CR>',
 vim.api.nvim_set_keymap('n', 'dx', ':lua require"treesitter-unit".delete()<CR>', {noremap=true})
 vim.api.nvim_set_keymap('n', 'cx', ':lua require"treesitter-unit".change()<CR>', {noremap=true})
 ```
+
+## Similar plugins
+
+[nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) for more fine-granular control

@@ -5,7 +5,7 @@ local M = {}
 local get_master_node = function()
   local node = ts_utils.get_node_at_cursor()
   if node == nil then
-    error("No treesitter configuration found")
+    error("No Treesitter parser found.")
   end
   local parent = node:parent()
   local root = ts_utils.get_root_for_node(node)

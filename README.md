@@ -39,7 +39,7 @@ vim.api.nvim_set_keymap('v', 'x', ':lua require"treesitter-unit".select()<CR>', 
 vim.api.nvim_set_keymap('o', 'x', ':<c-u>lua require"treesitter-unit".select()<CR>', {noremap=true})
 ```
 
-Note: The operator-pending mapping (onoremap) allows the usage for operators on the treesitter-unit, e.g. `dx` or `cx`.
+Note: The operator-pending mapping (onoremap) allows the usage for operators on the treesitter unit, e.g. `dx` or `cx`.
 
 ## Similar plugins
 

@@ -34,20 +34,23 @@ This function takes an optional Boolean flag to specify if the outer scope shoul
 
 For init.vim:
 ```
-vnoremap iu :lua require"treesitter-unit".select()<CR>
-vnoremap au :lua require"treesitter-unit".select(true)<CR>
+xnoremap iu :lua require"treesitter-unit".select()<CR>
+xnoremap au :lua require"treesitter-unit".select(true)<CR>
 onoremap iu :<c-u>lua require"treesitter-unit".select()<CR>
 onoremap au :<c-u>lua require"treesitter-unit".select(true)<CR>
 ```
 For init.lua:
 ```
-vim.api.nvim_set_keymap('v', 'iu', ':lua require"treesitter-unit".select()<CR>', {noremap=true})
-vim.api.nvim_set_keymap('v', 'au', ':lua require"treesitter-unit".select(true)<CR>', {noremap=true})
+vim.api.nvim_set_keymap('x', 'iu', ':lua require"treesitter-unit".select()<CR>', {noremap=true})
+vim.api.nvim_set_keymap('x', 'au', ':lua require"treesitter-unit".select(true)<CR>', {noremap=true})
 vim.api.nvim_set_keymap('o', 'iu', ':<c-u>lua require"treesitter-unit".select()<CR>', {noremap=true})
 vim.api.nvim_set_keymap('o', 'au', ':<c-u>lua require"treesitter-unit".select(true)<CR>', {noremap=true})
 ```
 
-Note: The operator-pending mappings (onoremap) allow the usage for operators on the treesitter unit, e.g. `diu` or `cau`.
+Examples:
+- `viu` to select the inner unit
+- `cau` to change the outer unit
+
 
 ## Similar plugins
 

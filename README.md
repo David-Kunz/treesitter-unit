@@ -7,7 +7,7 @@ It allows you to quickly select, yank, delete or replace language-specific range
 For inner selections, the main node under the cursor is selected.
 For outer selections, the next node is selected.
 
-![demo-unit](https://user-images.githubusercontent.com/1009936/130352461-230d25a3-7807-4dda-b0be-08eea386ea1b.gif)
+![demo-with-highlight](https://user-images.githubusercontent.com/1009936/130355705-5da61f06-52a9-43f4-a98c-7e2df3ae175b.gif)
 
 ## Installation
 

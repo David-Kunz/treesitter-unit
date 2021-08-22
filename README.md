@@ -6,7 +6,7 @@ It allows you to quickly select, yank, delete or replace language-specific range
 
 The first node of the current line will be selected (or the next node in case of empty lines).
 
-![gif](https://user-images.githubusercontent.com/1009936/130351208-292bfc54-b797-447a-8608-7738ab947ee2.gif)
+![demo](https://user-images.githubusercontent.com/1009936/130351294-f4f60701-a5e0-483c-a24e-43d87c0ea688.gif)
 
 ## Installation
 

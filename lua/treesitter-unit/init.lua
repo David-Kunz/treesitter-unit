@@ -73,7 +73,9 @@ M.select = function(outer)
     sel_row = move_row_while_empty(bufnr, sel_row, 1) + 1
     sel_col = 0
   end
-  sel_col = move_col_while_empty(bufnr, sel_row)
+  if outer then
+    sel_col = move_col_while_empty(bufnr, sel_row)
+  end
 
   local node = get_main_node({ sel_row, sel_col })
   local start_row, start_col, end_row, end_col = node:range()

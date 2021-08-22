@@ -4,7 +4,8 @@ A tiny [Neovim](https://neovim.io/) plugin to deal with [treesitter](https://git
 A unit is defined as a treesitter node including all its children.
 It allows you to quickly select, yank, delete or replace language-specific ranges.
 
-The first node of the current line will be selected (or for outer selections the next node in case of empty lines).
+For inner selections, the main node under the cursor is selected.
+For outer selections, the next node is selected.
 
 ![demo-unit](https://user-images.githubusercontent.com/1009936/130352461-230d25a3-7807-4dda-b0be-08eea386ea1b.gif)
 

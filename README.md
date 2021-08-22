@@ -30,6 +30,12 @@ use 'David-Kunz/treesitter-unit'
 ```
 This function takes an optional Boolean flag to specify if the outer scope should be selected as well.
 
+To automatically highlight the treesitter unit, you can run
+```
+:lua require"treesitter-unit".enable_highlighting()
+```
+As an optional parameter you can specify the highlight group, default: `"CursorLine"`.
+
 ### Useful mappings
 
 For init.vim:

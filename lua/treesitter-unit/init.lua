@@ -18,7 +18,7 @@ end
 local get_main_node = function(cursor)
   local node = get_node_for_cursor(cursor)
   if node == nil then
-    error("No Treesitter parser found.")
+    return node
   end
   local parent = node:parent()
   local root = ts_utils.get_root_for_node(node)
@@ -62,8 +62,7 @@ local select_range = function(bufnr, start_row, start_col, end_row, end_col, mod
   vim.fn.setpos(".", { bufnr, end_row, end_col - 1, 0 })
 end
 
-M.select = function(outer)
-
+local function get_selection_range(outer)
   local bufnr = vim.api.nvim_get_current_buf()
   local cursor = vim.api.nvim_win_get_cursor(0)
 
@@ -78,6 +77,9 @@ M.select = function(outer)
   end
 
   local node = get_main_node({ sel_row, sel_col })
+  if node == nil then
+    return
+  end
   local start_row, start_col, end_row, end_col = node:range()
 
   local mode = 'v'
@@ -93,9 +95,39 @@ M.select = function(outer)
       end
     end
   end
-  select_range(bufnr, start_row, start_col, end_row, end_col, mode)
-
+  return start_row, start_col, end_row, end_col
 end
+
+M.select = function(outer)
+  local bufnr = vim.api.nvim_get_current_buf()
+  local start_row, start_col, end_row, end_col = get_selection_range(outer)
+  if start_row == nil then return end
+  select_range(bufnr, start_row, start_col, end_row, end_col, mode)
+end
+
+local highlight_ns = vim.api.nvim_create_namespace('treesitter-unit-ns')
+local last_start
+local last_end
+
+M.highlight_unit = function(higroup)
+  local bufnr = vim.api.nvim_get_current_buf()
+  if last_start then
+    vim.api.nvim_buf_clear_namespace(bufnr, highlight_ns, 0, -1)
+  end
+  local start_row, start_col, end_row, end_col = get_selection_range()
+  if start_row == nil then
+    return
+  end
+  last_start = { start_row, start_col }
+  last_end = { end_row, end_col }
+  vim.highlight.range(bufnr, highlight_ns, higroup, last_start, last_end)
+end
+
+M.enable_highlighting = function(higroup)
+  local used_higroup = higroup or "CursorLine"
+  vim.cmd('au CursorMoved * lua require"treesitter-unit".highlight_unit("' .. used_higroup .. '")')
+end
+
 
 M.delete = function(for_change)
   local bufnr = vim.api.nvim_get_current_buf()

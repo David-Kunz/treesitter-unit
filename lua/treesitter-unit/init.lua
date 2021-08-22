@@ -84,6 +84,7 @@ M.select = function(outer)
       local text = get_text(bufnr, end_row + 2)
       if text == '' then
         end_row = move_row_while_empty(bufnr, end_row + 2, 1) - 1
+        start_col = 0
       end
     end
   end

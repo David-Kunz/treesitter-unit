@@ -95,12 +95,12 @@ local function get_selection_range(outer)
       end
     end
   end
-  return start_row, start_col, end_row, end_col
+  return start_row, start_col, end_row, end_col, mode
 end
 
 M.select = function(outer)
   local bufnr = vim.api.nvim_get_current_buf()
-  local start_row, start_col, end_row, end_col = get_selection_range(outer)
+  local start_row, start_col, end_row, end_col, mode = get_selection_range(outer)
   if start_row == nil then return end
   select_range(bufnr, start_row, start_col, end_row, end_col, mode)
 end

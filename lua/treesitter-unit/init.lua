@@ -2,9 +2,9 @@ local ts_utils = require("nvim-treesitter.ts_utils")
 
 local M = {}
 
--- local get_text = function(bufnr, line)
---   return vim.api.nvim_buf_get_lines(bufnr, line - 1, line, false)[1]
--- end
+local get_text = function(bufnr, line)
+  return vim.api.nvim_buf_get_lines(bufnr, line - 1, line, false)[1]
+end
 
 local get_node_for_cursor = function(cursor)
   if cursor == nil then
@@ -31,22 +31,22 @@ local get_main_node = function(cursor)
 end
 
 local move_row_while_empty = function(bufnr, curr_line, delta)
-  local line = curr_line - 1
-  if vim.api.nvim_buf_get_lines(bufnr, line, line + 1, false)[1] == '' then
+  local line = curr_line
+  if get_text(bufnr, line) == '' then
     local parent = line + delta
-    local line_parent = vim.api.nvim_buf_get_lines(bufnr, parent, parent + 1, false)[1]
+    local line_parent = get_text(bufnr, parent)
     while parent >= 0 and line_parent == '' do
       line = parent
       parent = line + delta
-      line_parent = vim.api.nvim_buf_get_lines(bufnr, parent, parent + 1, false)[1]
+      line_parent = get_text(bufnr, parent)
     end
   end
-  return line + 1
+  return line
 end
 
 local move_col_while_empty = function(bufnr, curr_line)
-  local line = curr_line - 1
-  local text = vim.api.nvim_buf_get_lines(bufnr, line, line + 1, false)[1]
+  local line = curr_line
+  local text = get_text(bufnr, line)
   local found = string.find(text, '[^%s]')
   return found - 1
 end
@@ -68,7 +68,7 @@ M.select = function(outer)
 
   local sel_row = cursor[1]
   local sel_col = cursor[2]
-  if vim.api.nvim_buf_get_lines(bufnr, sel_row - 1, sel_row, false)[1] == '' then
+  if get_text(bufnr, sel_row) == '' then
     sel_row = move_row_while_empty(bufnr, sel_row, 1) + 1
     sel_col = 0
   end
@@ -81,7 +81,7 @@ M.select = function(outer)
     if cursor[1] < sel_row then
       start_row = move_row_while_empty(bufnr, start_row, -1) - 1
     else
-      local text = vim.api.nvim_buf_get_lines(bufnr, end_row + 1, end_row + 2, false)[1] 
+      local text = get_text(bufnr, end_row + 2)
       if text == '' then
         end_row = move_row_while_empty(bufnr, end_row + 2, 1) - 1
       end

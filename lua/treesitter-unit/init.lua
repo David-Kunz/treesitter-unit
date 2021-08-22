@@ -48,7 +48,7 @@ local move_col_while_empty = function(bufnr, curr_line)
   local line = curr_line
   local text = get_text(bufnr, line)
   local found = string.find(text, '[^%s]')
-  return found - 1
+  return found  and found - 1 or 0
 end
 
 local select_range = function(bufnr, start_row, start_col, end_row, end_col, mode)
@@ -69,7 +69,7 @@ M.select = function(outer)
 
   local sel_row = cursor[1]
   local sel_col = cursor[2]
-  if get_text(bufnr, sel_row) == '' then
+  if outer and get_text(bufnr, sel_row) == '' then
     sel_row = move_row_while_empty(bufnr, sel_row, 1) + 1
     sel_col = 0
   end

@@ -51,13 +51,14 @@ local move_col_while_empty = function(bufnr, curr_line)
   return found - 1
 end
 
-local select_range = function(bufnr, start_row, start_col, end_row, end_col)
+local select_range = function(bufnr, start_row, start_col, end_row, end_col, mode)
   start_row = start_row + 1
   start_col = start_col + 1
   end_row = end_row + 1
   end_col = end_col + 1
+  mode = mode or 'v'
   vim.fn.setpos(".", { bufnr, start_row, start_col, 0 })
-  vim.cmd("normal! " .. "v", true, true, true)
+  vim.cmd("normal! " .. mode, true, true, true)
   vim.fn.setpos(".", { bufnr, end_row, end_col - 1, 0 })
 end
 
@@ -77,6 +78,7 @@ M.select = function(outer)
   local node = get_main_node({ sel_row, sel_col })
   local start_row, start_col, end_row, end_col = node:range()
 
+  local mode = 'v'
   if outer then
     if cursor[1] < sel_row then
       start_row = move_row_while_empty(bufnr, start_row, -1) - 1
@@ -85,10 +87,11 @@ M.select = function(outer)
       if text == '' then
         end_row = move_row_while_empty(bufnr, end_row + 2, 1) - 1
         start_col = 0
+        mode = 'V'
       end
     end
   end
-  select_range(bufnr, start_row, start_col, end_row, end_col)
+  select_range(bufnr, start_row, start_col, end_row, end_col, mode)
 
 end
 

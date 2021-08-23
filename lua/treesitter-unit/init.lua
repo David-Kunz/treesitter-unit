@@ -125,9 +125,17 @@ end
 
 M.enable_highlighting = function(higroup)
   local used_higroup = higroup or "CursorLine"
-  vim.cmd('au CursorMoved * lua require"treesitter-unit".highlight_unit("' .. used_higroup .. '")')
+  vim.cmd('augroup treesitter-unit-highlight')
+  vim.cmd('autocmd!')
+  vim.cmd('autocmd CursorMoved * lua require"treesitter-unit".highlight_unit("' .. used_higroup .. '")')
+  vim.cmd('augroup END')
 end
 
+M.disable_highlighting = function()
+  vim.cmd('augroup treesitter-unit-highlight')
+  vim.cmd('autocmd!')
+  vim.cmd('augroup END')
+end
 
 M.delete = function(for_change)
   local bufnr = vim.api.nvim_get_current_buf()

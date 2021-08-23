@@ -28,10 +28,9 @@ use 'David-Kunz/treesitter-unit'
 ```
 :lua require"treesitter-unit".select()
 ```
-This function takes an optional Boolean flag to specify if the outer scope should be selected as well.
+This function takes an optional Boolean flag to specify if the outer scope should be selected as well, default `false`.
 
-#### Optional
-To automatically highlight the treesitter unit, you can run
+To automatically highlight the current treesitter unit, you can run
 ```
 :lua require"treesitter-unit".enable_highlighting()
 ```

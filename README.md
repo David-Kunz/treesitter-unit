@@ -25,17 +25,22 @@ use 'David-Kunz/treesitter-unit'
 ## Usage
 
 ### Select treesitter unit
+You can select the current treesitter unit
 ```
-:lua require"treesitter-unit".select()
+:lua require"treesitter-unit".select(outer?)
 ```
 This function takes an optional Boolean flag to specify if the outer scope should be selected as well, default `false`.
+For operations like delete, change, ... please see section "Useful mappings".
 
-To automatically highlight the current treesitter unit, you can run
+### Automatic Highlighting
+You can toggle automatic highlighting for the current treesitter unit.
 ```
-:lua require"treesitter-unit".enable_highlighting()
+:lua require"treesitter-unit".toggle_highlighting(higroup?)
 ```
 As an optional parameter you can specify the highlight group, default: `"CursorLine"`.
-If you want to disable it again, you can call `:lua require"treesitter-unit".disable_highlighting()`.
+Alternative:
+`:lua require"treesitter-unit".enable_highlighting(higroup?)`.
+`:lua require"treesitter-unit".disable_highlighting()`.
 
 ### Useful mappings
 

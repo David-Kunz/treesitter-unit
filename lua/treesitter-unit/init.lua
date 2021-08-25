@@ -135,6 +135,8 @@ M.disable_highlighting = function()
   vim.cmd('augroup treesitter-unit-highlight')
   vim.cmd('autocmd!')
   vim.cmd('augroup END')
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.api.nvim_buf_clear_namespace(bufnr, highlight_ns, 0, -1)
 end
 
 M.delete = function(for_change)

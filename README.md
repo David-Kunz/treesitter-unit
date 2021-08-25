@@ -38,8 +38,8 @@ You can toggle automatic highlighting for the current treesitter unit.
 :lua require"treesitter-unit".toggle_highlighting(higroup?)
 ```
 As an optional parameter you can specify the highlight group, default: `"CursorLine"`.
-Alternative:
-`enable_highlighting(higroup?)` and `disable_highlighting()`.
+
+Alternative: `enable_highlighting(higroup?)` and `disable_highlighting()`.
 
 ### Useful mappings
 

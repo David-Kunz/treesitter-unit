@@ -1,6 +1,16 @@
 local ts_utils = require("nvim-treesitter.ts_utils")
 
+local options = { ignore_types = {} }
 local M = {}
+
+local contains = function(table, element)
+  for _, value in pairs(table) do
+    if value == element then
+      return true
+    end
+  end
+  return false
+end
 
 local get_text = function(bufnr, line)
   return vim.api.nvim_buf_get_lines(bufnr, line - 1, line, false)[1]
@@ -17,13 +27,13 @@ end
 
 local get_main_node = function(cursor)
   local node = get_node_for_cursor(cursor)
-  if node == nil then
+  if node == nil or contains(options.ignore_types, node:type()) then
     return node
   end
   local parent = node:parent()
   local root = ts_utils.get_root_for_node(node)
   local start_row = node:start()
-  while (parent ~= nil and parent ~= root and parent:start() == start_row ) do
+  while (parent ~= nil and parent ~= root and parent:start() == start_row and not contains(options.ignore_types, parent:type())) do
     node = parent
     parent = node:parent()
   end
@@ -161,6 +171,10 @@ end
 M.change = function()
   M.delete(true)
   vim.cmd('startinsert')
+end
+
+M.setup = function(opts)
+  options = vim.tbl_deep_extend('force', options, opts)
 end
 
 return M

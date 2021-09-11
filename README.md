@@ -3,7 +3,7 @@
 ## Tested in
 <table>
 <th>
-<td>1</td> <td>2</td></th>
+<td>Working</td></th>
 <tr>
 <td>bash</td><td> </td></tr>
 <tr>
@@ -11,7 +11,7 @@
 <tr>
 <td>bibtex</td><td> </td></tr>
 <tr>
-<td>c</td><td> </td> <td></tr>
+<td>c</td><td> </td></tr>
 <tr>
 <td>c_sharp</td><td></td></tr>
 <tr>

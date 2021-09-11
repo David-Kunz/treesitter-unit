@@ -1,11 +1,157 @@
 # treesitter-unit
 
-## Teste
-<!--textobjectinfo-->
+## Tested in
 <table>
-<th><td>1</td> <td>2</td> </th>
-<tr><td>bash</td><td>1</td> <td>2</td></tr>
-<tr><td>java</td><td>1</td> <td>2</td></tr>
+<th>
+<td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td> <td>19</td> </th>
+<tr>
+<td>bash</td><td> </td></tr>
+<tr>
+<td>beancount</td><td> </td></tr>
+<tr>
+<td>bibtex</td></tr>
+<tr>
+<td>c</td></tr>
+<tr>
+<td>c_sharp</td></tr>
+<tr>
+<td>clojure</td></tr>
+<tr>
+<td>cmake</td></tr>
+<tr>
+<td>comment</td></tr>
+<tr>
+<td>commonlisp</td></tr>
+<tr>
+<td>cpp</td></tr>
+<tr>
+<td>css</td></tr>
+<tr>
+<td>cuda</td></tr>
+<tr>
+<td>dart</td></tr>
+<tr>
+<td>devicetree</td></tr>
+<tr>
+<td>dockerfile</td></tr>
+<tr>
+<td>elixir</td></tr>
+<tr>
+<td>elm</td></tr>
+<tr>
+<td>erlang</td></tr>
+<tr>
+<td>fennel</td></tr>
+<tr>
+<td>fish</td></tr>
+<tr>
+<td>fortran</td></tr>
+<tr>
+<td>Godot (gdscript)</td></tr>
+<tr>
+<td>Glimmer and Ember</td></tr>
+<tr>
+<td>go</td></tr>
+<tr>
+<td>Godot Resources (gdresource)</td></tr>
+<tr>
+<td>gomod</td></tr>
+<tr>
+<td>graphql</td></tr>
+<tr>
+<td>haskell</td></tr>
+<tr>
+<td>hcl</td></tr>
+<tr>
+<td>heex</td></tr>
+<tr>
+<td>html</td></tr>
+<tr>
+<td>java</td></tr>
+<tr>
+<td>javascript</td></tr>
+<tr>
+<td>jsdoc</td></tr>
+<tr>
+<td>json</td></tr>
+<tr>
+<td>json5</td></tr>
+<tr>
+<td>JSON with comments</td></tr>
+<tr>
+<td>julia</td></tr>
+<tr>
+<td>kotlin</td></tr>
+<tr>
+<td>latex</td></tr>
+<tr>
+<td>ledger</td></tr>
+<tr>
+<td>lua</td></tr>
+<tr>
+<td>nix</td></tr>
+<tr>
+<td>ocaml</td></tr>
+<tr>
+<td>ocaml_interface</td></tr>
+<tr>
+<td>ocamllex</td></tr>
+<tr>
+<td>php</td></tr>
+<tr>
+<td>python</td></tr>
+<tr>
+<td>ql</td></tr>
+<tr>
+<td>Tree-sitter query language</td></tr>
+<tr>
+<td>r</td></tr>
+<tr>
+<td>regex</td></tr>
+<tr>
+<td>rst</td></tr>
+<tr>
+<td>ruby</td></tr>
+<tr>
+<td>rust</td></tr>
+<tr>
+<td>scala</td></tr>
+<tr>
+<td>scss</td></tr>
+<tr>
+<td>sparql</td></tr>
+<tr>
+<td>supercollider</td></tr>
+<tr>
+<td>surface</td></tr>
+<tr>
+<td>svelte</td></tr>
+<tr>
+<td>swift</td></tr>
+<tr>
+<td>teal</td></tr>
+<tr>
+<td>tlaplus</td></tr>
+<tr>
+<td>toml</td></tr>
+<tr>
+<td>tsx</td></tr>
+<tr>
+<td>turtle</td></tr>
+<tr>
+<td>typescript</td></tr>
+<tr>
+<td>verilog</td></tr>
+<tr>
+<td>vim</td></tr>
+<tr>
+<td>vue</td></tr>
+<tr>
+<td>yaml</td></tr>
+<tr>
+<td>yang</td></tr>
+<tr>
+<td>zig</td></tr>
 </table>
 <!--textobjectinfo-->
 

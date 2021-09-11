@@ -3,155 +3,155 @@
 ## Tested in
 <table>
 <th>
-<td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td> <td>19</td> </th>
+<td>1</td> <td>2</td></th>
 <tr>
 <td>bash</td><td> </td></tr>
 <tr>
 <td>beancount</td><td> </td></tr>
 <tr>
-<td>bibtex</td></tr>
+<td>bibtex</td><td> </td></tr>
 <tr>
-<td>c</td></tr>
+<td>c</td><td> </td> <td></tr>
 <tr>
-<td>c_sharp</td></tr>
+<td>c_sharp</td><td></td></tr>
 <tr>
-<td>clojure</td></tr>
+<td>clojure</td><td> </td></tr>
 <tr>
-<td>cmake</td></tr>
+<td>cmake</td><td> </td></tr>
 <tr>
-<td>comment</td></tr>
+<td>comment</td><td> </td></tr>
 <tr>
-<td>commonlisp</td></tr>
+<td>commonlisp</td><td> </td></tr>
 <tr>
-<td>cpp</td></tr>
+<td>cpp</td><td> </td></tr>
 <tr>
-<td>css</td></tr>
+<td>css</td><td> </td></tr>
 <tr>
-<td>cuda</td></tr>
+<td>cuda</td><td> </td></tr>
 <tr>
-<td>dart</td></tr>
+<td>dart</td><td> </td></tr>
 <tr>
-<td>devicetree</td></tr>
+<td>devicetree</td><td> </td></tr>
 <tr>
-<td>dockerfile</td></tr>
+<td>dockerfile</td><td> </td></tr>
 <tr>
-<td>elixir</td></tr>
+<td>elixir</td><td> </td></tr>
 <tr>
-<td>elm</td></tr>
+<td>elm</td><td> </td></tr>
 <tr>
-<td>erlang</td></tr>
+<td>erlang</td><td> </td></tr>
 <tr>
-<td>fennel</td></tr>
+<td>fennel</td><td> </td></tr>
 <tr>
-<td>fish</td></tr>
+<td>fish</td><td> </td></tr>
 <tr>
-<td>fortran</td></tr>
+<td>fortran</td><td> </td></tr>
 <tr>
-<td>Godot (gdscript)</td></tr>
+<td>Godot (gdscript)</td><td> </td></tr>
 <tr>
-<td>Glimmer and Ember</td></tr>
+<td>Glimmer and Ember</td><td> </td></tr>
 <tr>
-<td>go</td></tr>
+<td>go</td><td></td></tr>
 <tr>
-<td>Godot Resources (gdresource)</td></tr>
+<td>Godot Resources (gdresource)</td><td> </td></tr>
 <tr>
-<td>gomod</td></tr>
+<td>gomod</td><td> </td></tr>
 <tr>
-<td>graphql</td></tr>
+<td>graphql</td><td> </td></tr>
 <tr>
-<td>haskell</td></tr>
+<td>haskell</td><td> </td></tr>
 <tr>
-<td>hcl</td></tr>
+<td>hcl</td><td> </td></tr>
 <tr>
-<td>heex</td></tr>
+<td>heex</td><td> </td></tr>
 <tr>
-<td>html</td></tr>
+<td>html</td><td> </td></tr>
 <tr>
-<td>java</td></tr>
+<td>java</td><td> </td></tr>
 <tr>
-<td>javascript</td></tr>
+<td>javascript</td><td></td></tr>
 <tr>
-<td>jsdoc</td></tr>
+<td>jsdoc</td><td> </td></tr>
 <tr>
-<td>json</td></tr>
+<td>json</td><td> </td></tr>
 <tr>
-<td>json5</td></tr>
+<td>json5</td><td> </td></tr>
 <tr>
-<td>JSON with comments</td></tr>
+<td>JSON with comments</td><td> </td></tr>
 <tr>
-<td>julia</td></tr>
+<td>julia</td><td> </td></tr>
 <tr>
-<td>kotlin</td></tr>
+<td>kotlin</td><td> </td></tr>
 <tr>
-<td>latex</td></tr>
+<td>latex</td><td> </td></tr>
 <tr>
-<td>ledger</td></tr>
+<td>ledger</td><td> </td></tr>
 <tr>
-<td>lua</td></tr>
+<td>lua</td><td> </td></tr>
 <tr>
-<td>nix</td></tr>
+<td>nix</td><td> </td></tr>
 <tr>
-<td>ocaml</td></tr>
+<td>ocaml</td><td> </td></tr>
 <tr>
-<td>ocaml_interface</td></tr>
+<td>ocaml_interface</td><td> </td></tr>
 <tr>
-<td>ocamllex</td></tr>
+<td>ocamllex</td><td> </td></tr>
 <tr>
-<td>php</td></tr>
+<td>php</td><td></td></tr>
 <tr>
-<td>python</td></tr>
+<td>python</td><td></td></tr>
 <tr>
-<td>ql</td></tr>
+<td>ql</td><td> </td></tr>
 <tr>
-<td>Tree-sitter query language</td></tr>
+<td>Tree-sitter query language</td><td> </td></tr>
 <tr>
-<td>r</td></tr>
+<td>r</td><td> </td></tr>
 <tr>
-<td>regex</td></tr>
+<td>regex</td><td> </td></tr>
 <tr>
-<td>rst</td></tr>
+<td>rst</td><td></td></tr>
 <tr>
-<td>ruby</td></tr>
+<td>ruby</td><td></td></tr>
 <tr>
-<td>rust</td></tr>
+<td>rust</td><td></td></tr>
 <tr>
-<td>scala</td></tr>
+<td>scala</td><td> </td></tr>
 <tr>
-<td>scss</td></tr>
+<td>scss</td><td> </td></tr>
 <tr>
-<td>sparql</td></tr>
+<td>sparql</td><td> </td></tr>
 <tr>
-<td>supercollider</td></tr>
+<td>supercollider</td><td> </td></tr>
 <tr>
-<td>surface</td></tr>
+<td>surface</td><td> </td></tr>
 <tr>
-<td>svelte</td></tr>
+<td>svelte</td><td> </td></tr>
 <tr>
-<td>swift</td></tr>
+<td>swift</td><td> </td></tr>
 <tr>
-<td>teal</td></tr>
+<td>teal</td><td> </td></tr>
 <tr>
-<td>tlaplus</td></tr>
+<td>tlaplus</td><td> </td></tr>
 <tr>
-<td>toml</td></tr>
+<td>toml</td><td> </td></tr>
 <tr>
-<td>tsx</td></tr>
+<td>tsx</td><td> </td></tr>
 <tr>
-<td>turtle</td></tr>
+<td>turtle</td><td> </td></tr>
 <tr>
-<td>typescript</td></tr>
+<td>typescript</td><td></td></tr>
 <tr>
-<td>verilog</td></tr>
+<td>verilog</td><td> </td></tr>
 <tr>
-<td>vim</td></tr>
+<td>vim</td><td> </td></tr>
 <tr>
-<td>vue</td></tr>
+<td>vue</td><td> </td></tr>
 <tr>
-<td>yaml</td></tr>
+<td>yaml</td><td> </td></tr>
 <tr>
-<td>yang</td></tr>
+<td>yang</td><td> </td></tr>
 <tr>
-<td>zig</td></tr>
+<td>zig</td><td></td></tr>
 </table>
 <!--textobjectinfo-->
 

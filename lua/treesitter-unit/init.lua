@@ -1,16 +1,8 @@
 local ts_utils = require("nvim-treesitter.ts_utils")
 
-local options = { ignore_types = {} }
+-- There are no options yet, maybe in the future
+local options = {}
 local M = {}
-
-local contains = function(table, element)
-  for _, value in pairs(table) do
-    if value == element then
-      return true
-    end
-  end
-  return false
-end
 
 local get_text = function(bufnr, line)
   return vim.api.nvim_buf_get_lines(bufnr, line - 1, line, false)[1]
@@ -27,13 +19,13 @@ end
 
 local get_main_node = function(cursor)
   local node = get_node_for_cursor(cursor)
-  if node == nil or contains(options.ignore_types, node:type()) then
+  if node == nil then
     return node
   end
   local parent = node:parent()
   local root = ts_utils.get_root_for_node(node)
   local start_row = node:start()
-  while (parent ~= nil and parent ~= root and parent:start() == start_row and not contains(options.ignore_types, parent:type())) do
+  while (parent ~= nil and parent ~= root and parent:start() == start_row) do
     node = parent
     parent = node:parent()
   end

@@ -11,7 +11,7 @@ For outer selections, the next node is selected.
 
 ## Installation
 
-Requirements: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) including a parser for your language
+Requirements: Neovim 0.12+ with a treesitter parser installed for your language (no `nvim-treesitter` plugin required – uses built-in `vim.treesitter` APIs)
 
 For [vim-plug](https://github.com/junegunn/vim-plug):
 ```

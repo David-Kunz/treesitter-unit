@@ -20,15 +20,37 @@ end
 local function get_main_node(cursor)
   local node = get_node_for_cursor(cursor)
   if not node then return nil end
-  -- Walk up only while the parent has the exact same range as the current node
-  -- (transparent/alias wrapper nodes). Stop when parent is larger.
+  -- Phase 1: walk up through transparent wrappers (exact same range).
+  -- e.g. call_expression and expression_statement share the same range.
   local sr, sc, er, ec = node:range()
   local parent = node:parent()
-  while parent ~= nil do
+  while parent ~= nil and parent:parent() ~= nil do
     local psr, psc, per, pec = parent:range()
     if psr ~= sr or psc ~= sc or per ~= er or pec ~= ec then break end
     node = parent
     parent = node:parent()
+  end
+  -- Phase 2: if we're still at a leaf-like node (no named children), walk up
+  -- while the parent starts at the same position — this promotes bare
+  -- identifiers/literals into their containing expression.
+  -- e.g. `console` (identifier) → `console.log("no")` (call_expression)
+  if node:named_child_count() == 0 then
+    local leaf_sr, leaf_sc = node:start()
+    parent = node:parent()
+    while parent ~= nil and parent:parent() ~= nil do
+      local psr, psc = parent:start()
+      if psr ~= leaf_sr or psc ~= leaf_sc then break end
+      node = parent
+      parent = node:parent()
+      -- re-run phase 1 to skip transparent wrappers at this level
+      local nsr, nsc, ner, nec = node:range()
+      while parent ~= nil and parent:parent() ~= nil do
+        local p2sr, p2sc, p2er, p2ec = parent:range()
+        if p2sr ~= nsr or p2sc ~= nsc or p2er ~= ner or p2ec ~= nec then break end
+        node = parent
+        parent = node:parent()
+      end
+    end
   end
   return node
 end

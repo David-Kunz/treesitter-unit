@@ -157,4 +157,26 @@ T['dau on last statement with preceding empty line'] = function()
   })
 end
 
+-- ─── regression: cursor on indented line inside else-branch ────────────────────
+
+T['diu inside else-branch selects call expression, not whole if'] = function()
+  setup_buf({
+    'if (true) {',
+    '  console.log("yes")',
+    '} else {',
+    '  console.log("no")',
+    '}',
+  }, { 4, 2 }, 'javascript')  -- cursor on whitespace before second console.log
+
+  child.type_keys('diu')
+
+  eq(get_lines(), {
+    'if (true) {',
+    '  console.log("yes")',
+    '} else {',
+    '  ',
+    '}',
+  })
+end
+
 return T
